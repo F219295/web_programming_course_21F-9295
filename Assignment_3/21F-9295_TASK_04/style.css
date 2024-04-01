@@ -1,0 +1,82 @@
+body {
+  background-color: #f0f0f0; /* Light gray background */
+  color: #333; /* Dark gray text color */
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.title {
+  font-size: 30px;
+  font-weight: bold;
+  color: #007bff; /* Blue color for the title */
+}
+
+.move-icon {
+  height: 50px;
+}
+
+.move-button {
+  background-color: transparent;
+  border: 3px solid #007bff; /* Blue border color */
+  width: 120px;
+  height: 120px;
+  border-radius: 60px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.result {
+  font-size: 25px;
+  font-weight: bold;
+  margin-top: 50px;
+}
+
+.score {
+  margin-top: 60px;
+}
+
+.reset-score-button,
+.auto-play-button {
+  background-color: #007bff; /* Blue color for buttons */
+  border: none;
+  font-size: 15px;
+  padding: 8px 15px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.reset-score-button:hover,
+.auto-play-button:hover {
+  background-color: #0056b3; /* Darker blue color on hover */
+}
+
+.game-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #f0f0f0; /* Light background color */
+  color: #333; /* Dark gray text color */
+  font-family: Arial, sans-serif;
+  height: 30px;
+  padding-top: 20px;
+  padding-bottom: 15px;
+}
+
+a {
+  text-decoration: none;
+  color: #007bff; /* Blue color for links */
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #0056b3; /* Darker blue color on hover */
+}
+
+/* Styling for emojis */
+.emoji {
+  display: inline-block;
+  font-size: 2em; /* Larger font size for emojis */
+  line-height: 1;
+  vertical-align: middle;
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task1</title>
+  <link rel="stylesheet" href="21F-9295_6-E_Task2.css">
+ </head>
+<body>
+  <div  class="container">
+    <form id="auth-form">
+      <label for="auth-option">Select Option:</label>
+      <select id="auth-option" name="auth-option" onchange="toggleForm()">
+        <option value="signup">Sign Up</option>
+        <option value="signin">Sign In</option>
+      </select>
+
+      <div id="signup-fields" class="form-fields">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        
+        <label for="birthdate">Birthdate:</label>
+        <input type="date" id="birthdate" name="birthdate" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender" required>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </select>
+        
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" required>
+        
+        <label for="zipcode">Zip Code:</label>
+        <input type="text" id="zipcode" name="zipcode" pattern="[0-9]{5}" placeholder="12345" required>
+        
+        <label for="country">Country:</label>
+        <input type="text" id="country" name="country" required>
+      </div>
+
+      <div id="signin-fields" class="form-fields" style="display:none;">
+        <label for="signin-username">Username:</label>
+        <input type="text" id="signin-username" name="signin-username" required>
+        
+        <label for="signin-password">Password:</label>
+        <input type="password" id="signin-password" name="signin-password" required>
+      </div>
+
+      <button type="button" onclick="validateAuthForm()">Submit</button>
+    </form>
+  </div>
+
+
+
+  <script src="21F-9295_6-E_Task2.js"></script>
+</body>
+</html>
