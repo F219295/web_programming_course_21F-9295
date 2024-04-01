@@ -79,17 +79,49 @@ function playGame(playerMove) {
 
   updateScoreElement();
 
+  const playerIcon = getPlayerIcon(playerMove);
+  const computerIcon = getComputerIcon(computerMove);
+
   document.querySelector('.js-result').innerHTML = result;
 
-  document.querySelector('.js-moves').innerHTML = `You
-<img src="images/${playerMove}-emoji.png" class="move-icon">
-<img src="images/${computerMove}-emoji.png" class="move-icon">
-Computer`;
+  document.querySelector('.js-moves').innerHTML = `You ${playerIcon} ${computerIcon} Computer`;
 }
 
 function updateScoreElement() {
   document.querySelector('.js-score')
     .innerHTML = `Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`;
+}
+
+function getPlayerIcon(move) {
+  let iconClass = '';
+  switch (move) {
+    case 'rock':
+      iconClass = ' <i class="fa-solid fa-hand-fist"></i>';
+      break;
+    case 'paper':
+      iconClass = '<i class="fa-regular fa-hand"></i>';
+      break;
+    case 'scissors':
+      iconClass = '<i class="fa-regular fa-hand-peace"></i>';
+      break;
+  }
+  return iconClass;
+}
+
+function getComputerIcon(move) {
+  let iconClass = '';
+  switch (move) {
+    case 'rock':
+      iconClass = ' <i class="fa-solid fa-hand-fist"></i>';
+      break;
+    case 'paper':
+      iconClass = '<i class="fa-regular fa-hand"></i>';
+      break;
+    case 'scissors':
+      iconClass = '<i class="fa-regular fa-hand-peace"></i>';
+      break;
+  }
+  return iconClass;
 }
 
 function pickComputerMove() {
